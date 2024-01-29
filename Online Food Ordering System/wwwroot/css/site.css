@@ -1,4 +1,21 @@
-html {
+
+* {
+    margin: 0px;
+    padding:0px;
+    outline: 0;
+    border: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'grandhotel-regular';
+    src: url('../fonts/grandhotel-regular.ttf') format('truetype');
+}
+
+
+/*html {
   font-size: 14px;
 }
 
@@ -19,4 +36,4 @@ html {
 
 body {
   margin-bottom: 60px;
-}
+}*/
