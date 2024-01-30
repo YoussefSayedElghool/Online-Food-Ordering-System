@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\css\ProductCardPartial.css" />
+    <Content Remove="wwwroot\css\_HeaderPartial - Copy.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\ProductCardPartial.css" />
+    <None Include="wwwroot\css\_HeaderPartial - Copy.css" />
     <None Include="wwwroot\css\_HeaderPartial.css" />
   </ItemGroup>
 

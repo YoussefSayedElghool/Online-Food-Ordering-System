@@ -7,6 +7,7 @@
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
+    font-weight:normal;
 }
 
 @font-face {
@@ -14,7 +15,10 @@
     src: url('../fonts/grandhotel-regular.ttf') format('truetype');
 }
 
-
+@font-face {
+    font-family: 'spacegrotesk-variablefont_wght';
+    src: url('../fonts/spacegrotesk-variablefont_wght.ttf') format('truetype');
+}
 /*html {
   font-size: 14px;
 }

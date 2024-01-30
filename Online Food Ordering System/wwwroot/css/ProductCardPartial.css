@@ -1,0 +1,98 @@
+﻿
+
+.food-imge {
+    object-fit: cover;
+    width: 153px;
+    height: 100%;
+}
+
+.product-card {
+    width: 400px;
+    height: 114px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background: #ffff;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.product-details {
+    font-family: spacegrotesk-variablefont_wght;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 0px 8px;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.details-top-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.details-down-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.food-tag-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.stare {
+    height: 20px;
+}
+
+.food-tag {
+    height: 24px;
+    font-weight: 500;
+    font-size: 13px;
+    background-color: #ffcf72;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 3px;
+}
+
+
+.add-to-cart-button {
+    font-weight: 500;
+    font-size: 16px;
+    /*background-color: #151515;*/
+    color: #FFFF;
+    padding: 5px 9px;
+    margin: 3px;
+    border-radius: 10px;
+    height: 28px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: lighter;
+    word-spacing: -2px;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+}
+
+.rating {
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 3px;
+}
+
+.proudect-price {
+font-weight:500;
+font-size:14px;
+
+}
+

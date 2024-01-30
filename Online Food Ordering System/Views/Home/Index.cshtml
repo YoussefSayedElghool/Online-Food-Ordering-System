@@ -2,3 +2,29 @@
     ViewData["Title"] = "Home Page";
 }
 
+<style>
+
+    .product-container {
+        width: 100vw;
+        height: 500px;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        /* overflow: auto; */
+    }
+
+
+</style>
+
+
+<div class="product-container">
+
+
+    @for (int i = 0; i < 10; i++)
+    {
+        <partial name="ProductCardPartial" />
+
+    }
+</div>
