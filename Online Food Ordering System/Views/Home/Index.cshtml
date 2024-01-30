@@ -2,6 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
+
 <style>
 
     .product-container {
@@ -19,8 +20,9 @@
 </style>
 
 
-<div class="product-container">
 
+<div class="product-container">
+    <partial name="FilterPartial" />
 
     @for (int i = 0; i < 10; i++)
     {

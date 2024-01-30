@@ -1,0 +1,25 @@
+﻿
+
+
+@{
+    List<string> foodList = new List<string>{"Healthy Food","Snack","Dessert","Japanese","Indian","French","Mexican","Italian","Chinese","Beverage","Thai","Korean","Vietnames","Nepalese","Spanish" };  
+
+
+
+}
+
+<link rel="stylesheet" href="~/css/FilterPartial.css" asp-append-version="true" />
+
+<div class="filter-container">
+    
+    <button class="filter-craitaria filter-craitaria-selected"> All </button>
+@foreach (var item in foodList)
+{
+        <button class="filter-craitaria filter-craitaria-unselected"> @item </button>
+}
+</div>
+
+@section Stylesheet {
+    <link rel="stylesheet" href="~/css/ProductCardPartial.css" asp-append-version="true" />
+
+}
