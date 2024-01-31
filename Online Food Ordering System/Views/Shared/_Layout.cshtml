@@ -6,7 +6,8 @@
     <title>@ViewData["Title"] - Online_Food_Ordering_System</title>
     @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    @await RenderSectionAsync("Stylesheet", required: false)
+    @RenderSection("Stylesheet", required: false)
+    @* @await RenderSectionAsync("Stylesheet", required: false) *@
     
 </head>
 <body>
