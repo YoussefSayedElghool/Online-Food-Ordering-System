@@ -1,0 +1,64 @@
+﻿
+
+.advantage-title {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.advantage-container {
+    width: 75%;
+    height: 350px;
+    display: flex;
+    font-family: spacegrotesk-variablefont_wght;
+    justify-content: space-around;
+    padding: 5%;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin: 50px;
+    border-radius: 43px;
+}
+
+.advantage-pargraph-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 400px;
+    width: 50%;
+    min-width: 290px;
+    height: 157px;
+}
+
+.advantage-img {
+    height: 249px;
+}
+
+/*.advantage-section {
+margin:40px
+}*/
+
+.advantage-right {
+    flex-direction: row;
+}
+
+.advantage-left {
+    flex-direction: row-reverse;
+    background: #efd8a9;
+}
+
+/*.advantage-pargraph-left {
+    align-items: flex-end;
+}
+
+.advantage-pargraph-right {
+    align-items: flex-start;
+}
+*/
+
+.advantage-pargraph {
+    font-size: 20px;
+    font-weight: lighter;
+    width: 400px;
+}
+
+

@@ -1,10 +1,27 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
-
-<p>Use this page to detail your site's privacy policy.</p>
+﻿@model List<Advantage>
 
 
 <link rel="stylesheet" href="~/css/FooterPartial.css" asp-append-version="true" />
-<partial name="FooterPartial" />
+<link rel="stylesheet" href="~/css/SectionPartial.css" asp-append-version="true" />
+
+<style>
+    .AboutUs-container {
+        overflow: auto;
+        /* background: antiquewhite; */
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+</style>
+
+<div class="AboutUs-container">
+@foreach (var item in @Model)
+    {
+        <partial name="SectionPartial" model="@item" />
+        
+    }
+<partial name="FooterPartial"/>
+</div>
