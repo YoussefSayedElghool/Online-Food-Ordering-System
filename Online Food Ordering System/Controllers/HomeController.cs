@@ -54,10 +54,15 @@ namespace Online_Food_Ordering_System.Controllers
             return View(advantages);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Login()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return PartialView();
+        }
+        
+        public IActionResult Register()
+        {
+            return PartialView();
         }
     }
 }

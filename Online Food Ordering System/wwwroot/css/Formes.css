@@ -1,0 +1,89 @@
+﻿
+
+.form-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 75%;
+    max-width: 645px;
+    min-height: 350px;
+    display: flex;
+    padding: 2% 3% 5% 3%;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 43px;
+    flex-direction: column;
+    font-family: 'grandhotel-regular';
+    justify-content: space-between;
+}
+
+.form-logo-img {
+    height: 90px;
+}
+
+.form-logo-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-logo-header {
+    font-family: 'grandhotel-regular';
+    margin: 9px;
+}
+
+.form-button {
+    background-color: #151515;
+    font-size: inherit;
+    text-align: center;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 7px;
+    font-family: Space Grotesk;
+    font-weight: lighter;
+    color: #fff;
+}
+
+.form-input-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.form input {
+    width: 50%;
+    height: 30px;
+    padding: 14px;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+    border-radius: 7px;
+    font-family: Space Grotesk;
+}
+
+.form-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-links a:visited {
+    color: #151515;
+}
+
+::placeholder {
+    color: #151515;
+    font-family: 'grandhotel-regular';
+    font-size: 15px;
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: red;
+}

@@ -23,10 +23,7 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    max-width: 400px;
-    width: 50%;
-    min-width: 290px;
-    height: 157px;
+    width: min-content;
 }
 
 .advantage-img {
@@ -58,7 +55,8 @@ margin:40px
 .advantage-pargraph {
     font-size: 20px;
     font-weight: lighter;
-    width: 400px;
+    max-width: 400px;
+    width: 50%;
+    min-width: 290px;
 }
-
 
