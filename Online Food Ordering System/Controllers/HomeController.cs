@@ -18,7 +18,7 @@ namespace Online_Food_Ordering_System.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult AboutUs()
         {
             List<Advantage> advantages = new List<Advantage>();
             Advantage advantage1 = new Advantage { 
