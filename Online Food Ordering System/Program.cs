@@ -21,6 +21,8 @@ namespace Online_Food_Ordering_System
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.MapControllerRoute(
