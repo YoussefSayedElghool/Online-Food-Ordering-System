@@ -36,7 +36,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Service\" />
     <Folder Include="Repository\abstraction layer\" />
   </ItemGroup>

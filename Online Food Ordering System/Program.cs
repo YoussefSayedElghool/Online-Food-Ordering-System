@@ -1,3 +1,8 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Online_Food_Ordering_System.Models;
+using System.Security.Principal;
+
 namespace Online_Food_Ordering_System
 {
     public class Program
@@ -8,6 +13,14 @@ namespace Online_Food_Ordering_System
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<AppDbContext>(optionBuilder =>
+            {
+
+                optionBuilder.UseSqlServer(builder.Configuration.GetConnectionString("cs"));
+            });
+
+            builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 
             var app = builder.Build();
 
