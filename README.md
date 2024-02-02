@@ -35,11 +35,11 @@
     
 ## Hearder Nav (create it as partial view)
   -Links to
-    - Home
-    - Abuat us
-    - Contact us
-    - User profile (as user image)
-    - Cart
+    -Home
+    -Abuat us
+    -Contact us
+    -User profile (as user image)
+    -Cart
   - Brand Name ("Elghool Food")
   - Search Icon
 
@@ -76,7 +76,7 @@
   - Footer
 
    ## Contact us Pages (create it as view)
-    - Go To Footer
+   - Go To Footer
 
 ## User profile Pages (create it as view)
   - User Image
