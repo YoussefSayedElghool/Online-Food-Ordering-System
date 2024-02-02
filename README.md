@@ -119,8 +119,52 @@
 
 
 # Database Model (create it with Code Frist)
-User 
-cart
-food
-Rating
-role
+
+
+| **Foods**  | 
+| ------------- |
+| FoodId  | 
+| name  |
+| C_Type  |
+| Veg_Non  |
+| description  |
+
+
+| **Users**  | 
+| ------------- |
+| UserId  | 
+| name  |
+| email  |
+|  password |
+| address  |
+| other some file exist at identity package|
+
+| **Orders**  | 
+| ------------- |
+| OrderId  | 
+| FoodId  |
+| UserId  |
+| status  |
+
+status: this filed apear the status of the Order status can be ("inCart" , "old" , "new")   
+
+| **Ratings**  | 
+| ------------- |
+| RatingId  | 
+| FoodId  |
+| rating  |
+
+| **Roles**  | 
+| ------------- |
+| field that exist at identity package |
+
+
+# table relationships 
+
+- one user can has many Food and the food can be associated to many users 
+  this many to many relationship apear at "**Orders**" table 
+
+- one user can Rate many Foods and the one food can be Rated by many users 
+this many to many relationship apear at "**Ratings**" table 
+
+- Also there are many to many relationship between "**Users**" and "**Roles**" but it aready exist at identity package        
