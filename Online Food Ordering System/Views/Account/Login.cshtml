@@ -1,0 +1,46 @@
+﻿@using Online_Food_Ordering_System.View_Models
+@model LoginViewModel
+
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/Formes.css" asp-append-version="true" />
+
+<div class="form-container">
+
+    <form asp-controller="Account" asp-action="Login" method="post" class="form" role="form">
+
+    
+        <div class="form-logo-container">
+
+            <img src="~/img/logo_full.png" class="form-logo-img" />
+            <h1 class="form-logo-header">Elghool Food</h1>
+        
+        </div>
+
+            <div class="form-input-container">
+
+
+            <label asp-for="Email"></label>
+            <input asp-for="Email" placeholder="Enter yor email" />
+            <span asp-validation-for="Email"></span>
+
+            <label asp-for="Password"></label>
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+
+            @* <input type="email" asp-controller="Home" asp-action="Index" placeholder="Enter yor email" />
+            <input type="password" asp-controller="Home" asp-action="Index" placeholder="Enter yor password" />
+ *@
+            </div>
+
+        <button type="submit" class="form-button">Login</button>
+        <div class="form-links">
+
+            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">forgot password</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">register</a>
+
+        </div>
+
+ 
+     </form>
+</div>

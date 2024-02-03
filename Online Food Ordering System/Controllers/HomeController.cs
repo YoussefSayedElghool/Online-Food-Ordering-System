@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Online_Food_Ordering_System.Models;
 using System.Diagnostics;
 
 namespace Online_Food_Ordering_System.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -54,15 +56,5 @@ namespace Online_Food_Ordering_System.Controllers
             return View(advantages);
         }
 
-        //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Login()
-        {
-            return PartialView();
-        }
-        
-        public IActionResult Register()
-        {
-            return PartialView();
-        }
     }
 }

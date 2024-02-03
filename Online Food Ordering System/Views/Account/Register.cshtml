@@ -1,0 +1,57 @@
+﻿@using Online_Food_Ordering_System.View_Models
+@model RegisterUserViewModel
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/Formes.css" asp-append-version="true" />
+
+<div class="form-container">
+
+    <form asp-controller="Account" asp-action="Register" method="post" class="form" role="form">
+
+
+        <div class="form-logo-container">
+
+            <img src="~/img/logo_full.png" class="form-logo-img" />
+            <h1 class="form-logo-header">Elghool Food</h1>
+
+        </div>
+
+        <div class="form-input-container">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <label asp-for="Name"></label>
+            <input asp-for="Name" placeholder="Enter yor name" />
+            <span asp-validation-for="Name"></span>
+
+            <label asp-for="Email"></label>
+            <input asp-for="Email" placeholder="Enter yor email" />
+            <span asp-validation-for="Email"></span>
+
+            <label asp-for="Password"></label>
+            <input asp-for="Password" placeholder="password" />
+            <span asp-validation-for="Password"></span>
+
+            <label asp-for="ConfirmPassword"></label>
+            <input asp-for="ConfirmPassword" placeholder="confirm password" />
+            <span asp-validation-for="ConfirmPassword"></span>           
+            
+            
+            <label asp-for="Address"></label>
+            <input asp-for="Address" placeholder="Address" />
+            <span asp-validation-for="Address"></span>
+
+
+        </div>
+
+        <button type="submit" class="form-button">Register</button>
+
+        <div class="form-links">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+        </div>
+
+
+    </form>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<partial name="_ValidationScriptsPartial" />
