@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Online_Food_Ordering_System.Models;
+using Online_Food_Ordering_System.Repository;
+using Online_Food_Ordering_System.Repository.abstraction_layer;
+using Online_Food_Ratinging_System.Repository;
 using System.Security.Principal;
 
 namespace Online_Food_Ordering_System
@@ -21,6 +24,11 @@ namespace Online_Food_Ordering_System
             });
 
             builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+
+            // Register 
+            builder.Services.AddScoped<IFoodRepository, FoodRepository>();
+            builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+            builder.Services.AddScoped<IRatingRepository, RatingRepository>();
 
             var app = builder.Build();
 
