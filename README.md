@@ -125,10 +125,19 @@
 | ------------- |
 | FoodId  | 
 | name  |
-| C_Type  |
-| Veg_Non  |
 | Price  |
-| description  |
+| description |
+
+
+| **CTypes**  | 
+| ------------- |
+| CTypeId  | 
+| CType  |
+
+| **Veg**  | 
+| ------------- |
+| VegId  | 
+| Veg  |
 
 
 | **Users**  | 
@@ -169,4 +178,11 @@ status: this filed apear the status of the Order status can be ("inCart" , "old"
 - one user can Rate many Foods and the one food can be Rated by many users 
 this many to many relationship apear at "**Ratings**" table 
 
-- Also there are many to many relationship between "**Users**" and "**Roles**" but it aready exist at identity package        
+- Also there are many to many relationship between "**Users**" and "**Roles**" but it aready exist at identity package
+
+- one **Food** has one **CTypes** , and one **CTypes** and associated to many **Foods**
+
+- one **Food** has one **Veg** , and one **Veg** and associated to many **Foods**
+
+
+
