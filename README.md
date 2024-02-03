@@ -127,6 +127,7 @@
 | name  |
 | C_Type  |
 | Veg_Non  |
+| Price  |
 | description  |
 
 
@@ -144,6 +145,7 @@
 | OrderId  | 
 | FoodId  |
 | UserId  |
+| Quantity |
 | status  |
 
 status: this filed apear the status of the Order status can be ("inCart" , "old" , "new")   
