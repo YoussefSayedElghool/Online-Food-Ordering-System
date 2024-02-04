@@ -6,6 +6,6 @@ namespace Online_Food_Ordering_System.Models
     {
         public int VegId { get; set; }
         public string Type { get; set; }
-        public ICollection<Food> Foods { get; } = new List<Food>();
+        public virtual ICollection<Food> Foods { get; } = new List<Food>();
     }
 }

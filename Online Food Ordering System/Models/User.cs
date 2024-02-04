@@ -6,8 +6,8 @@ namespace Online_Food_Ordering_System.Models
     public class User:IdentityUser
     {
         public required string Address { get; set; }
-        public List<Rating> Ratings { get; } = [];
-        public List<Order> Orders { get; } = [];
+        public virtual List<Rating> Ratings { get; } = [];
+        public virtual List<Order> Orders { get; } = [];
 
     }
 }

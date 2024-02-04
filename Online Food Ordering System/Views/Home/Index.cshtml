@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Online_Food_Ordering_System.View_Models
+@model List<FoodCardVeiwModel>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -14,30 +17,31 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        overflow:auto;
+        overflow: auto;
     }
 
-    .home-container{
+    .home-container {
         margin: 50px;
         margin-top: 30px;
     }
-
-
-
 
 </style>
 
 <div class="home-container">
 
-<partial name="FilterPartial" />
+    <partial name="FilterPartial" />
 
 
-<div class="product-container" id="productContainer">
+    <div class="product-container" id="productContainer">
 
-    @for (int i = 0; i < 200; i++)
-    {
-        <partial name="ProductCardPartial" />
+        @foreach (FoodCardVeiwModel item in @Model)
+        {
 
-    }
-</div>
+            <partial name="ProductCardPartial" model="item" />
+
+        }
+
+      
+        
+    </div>
 </div>

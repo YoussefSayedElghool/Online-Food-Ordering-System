@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Online_Food_Ordering_System.Models;
 using Online_Food_Ordering_System.Repository;
 using Online_Food_Ordering_System.Repository.abstraction_layer;
+using Online_Food_Ordering_System.Service;
+using Online_Food_Ordering_System.Service.abstraction_layer;
 using Online_Food_Ratinging_System.Repository;
 using System.Security.Principal;
 
@@ -20,7 +22,7 @@ namespace Online_Food_Ordering_System
             builder.Services.AddDbContext<AppDbContext>(optionBuilder =>
             {
 
-                optionBuilder.UseSqlServer(builder.Configuration.GetConnectionString("cs"));
+                optionBuilder.UseLazyLoadingProxies().UseSqlServer(builder.Configuration.GetConnectionString("cs"));
             });
 
             builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
@@ -29,6 +31,7 @@ namespace Online_Food_Ordering_System
             builder.Services.AddScoped<IFoodRepository, FoodRepository>();
             builder.Services.AddScoped<IOrderRepository, OrderRepository>();
             builder.Services.AddScoped<IRatingRepository, RatingRepository>();
+            builder.Services.AddScoped<IFoodService, FoodService>();
 
             var app = builder.Build();
 

@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Online_Food_Ordering_System.Models;
+using Online_Food_Ordering_System.Service.abstraction_layer;
+using System.CodeDom;
 using System.Diagnostics;
 
 namespace Online_Food_Ordering_System.Controllers
@@ -8,16 +10,17 @@ namespace Online_Food_Ordering_System.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IFoodService foodService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IFoodService foodService)
         {
-            _logger = logger;
+            this.foodService = foodService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            
+            return View(foodService.GetAllFood());
         }
 
         public IActionResult AboutUs()

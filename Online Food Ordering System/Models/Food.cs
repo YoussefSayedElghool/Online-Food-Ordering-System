@@ -13,13 +13,13 @@ namespace Online_Food_Ordering_System.Models
         public required bool IsVisible { get; set; } = true;
 
         public int CTypeId { get; set; }
-        public CType CType { get; set; } = null!;
+        public virtual CType CType { get; set; } = null!;
         
         public int VegId { get; set; }
-        public Veg Veg { get; set; } = null!;
+        public virtual Veg Veg { get; set; } = null!;
 
-        public List<Rating> Ratings { get; } = [];
-        public List<Order> Orders { get; } = [];
+        public virtual List<Rating> Ratings { get; } = [];
+        public virtual List<Order> Orders { get; } = [];
 
     }
 }

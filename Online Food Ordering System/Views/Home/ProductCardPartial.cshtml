@@ -1,4 +1,7 @@
-﻿
+﻿@using Online_Food_Ordering_System.View_Models
+@model FoodCardVeiwModel
+
+
 <div class="product-card" id="card">
 
     <div class="product-details">
@@ -6,20 +9,20 @@
         <div class="details-top-section">
             <div class="rating-container">
                 <img src="~/img/stare.png" class="stare" />
-                <span class="rating">4.5</span>
+                <span class="rating">@Model.AvargeRating</span>
             </div>
 
             <div class="food-tag-container">
-                <h1 class="food-tag">veg</h1>
-                <h1 class="food-tag">Healthy Food</h1>
+                <h1 class="food-tag">@Model.VegType</h1>
+                <h1 class="food-tag">@Model.CType</h1>
 
             </div>
         </div>
 
-        <div class="product-name">lemon honey glazed sous vide corn on the cob</div>
+        <div class="product-name">@Model.Name</div>
 
         <div class="details-down-section">
-            <div class="proudect-price">199.9$</div>
+            <div class="proudect-price">@Model.Price</div>
             <button class="add-to-cart-button">
                 <img src="~/img/add-to-cart.png" style="height:21px" />
             </button>
@@ -27,7 +30,7 @@
 
 
     </div>
-
-    <img src="~/img/food.jpeg" class="food-imge" />
+    
+    <img src="@(Model.Image.Replace("~" , ""))" class="food-imge" />
 </div>
 

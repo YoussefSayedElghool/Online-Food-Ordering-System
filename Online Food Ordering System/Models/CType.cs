@@ -4,6 +4,6 @@
     {
         public int CTypeId { get; set; }
         public string Type { get; set; }
-        public ICollection<Food> Foods { get; } = new List<Food>();
+        public virtual ICollection<Food> Foods { get; } = new List<Food>();
     }
 }

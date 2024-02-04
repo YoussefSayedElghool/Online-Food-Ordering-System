@@ -17,7 +17,7 @@ namespace Online_Food_Ordering_System.Models
         public required int Quantity { get; set; }
         public required string Status { get; set; }
 
-        public Food Food { get; set; } = null!;
-        public User User { get; set; } = null!;
+        public virtual Food Food { get; set; } = null!;
+        public virtual User User { get; set; } = null!;
     }
 }
