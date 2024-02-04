@@ -9,6 +9,7 @@ namespace Online_Food_Ordering_System.Models
         public required string Name { get; set; }
         public required decimal Price { get; set; }
         public required string Description { get; set; }
+        public required string Image { get; set; }
         public required bool IsVisible { get; set; } = true;
 
         public int CTypeId { get; set; }
