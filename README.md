@@ -143,10 +143,11 @@
 | **Users**  | 
 | ------------- |
 | UserId  | 
-| name  |
+| DispalyName  |
 | email  |
 |  password |
 | address  |
+| image  |
 | other some file exist at identity package|
 
 | **Orders**  | 
