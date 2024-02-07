@@ -32,6 +32,8 @@ namespace Online_Food_Ordering_System
             builder.Services.AddScoped<IOrderRepository, OrderRepository>();
             builder.Services.AddScoped<IRatingRepository, RatingRepository>();
             builder.Services.AddScoped<IFoodService, FoodService>();
+            builder.Services.AddScoped<ICTypeRepository, CTypeRepository>();
+            builder.Services.AddScoped<ICTypeService, CTypeService>();
 
             var app = builder.Build();
 

@@ -12,7 +12,7 @@ namespace Online_Food_Ordering_System.Controllers
     {
         private readonly IFoodService foodService;
 
-        public HomeController(IFoodService foodService)
+        public HomeController(IFoodService foodService , ICTypeService cTypeService)
         {
             this.foodService = foodService;
         }
@@ -21,6 +21,12 @@ namespace Online_Food_Ordering_System.Controllers
         {
             
             return View(foodService.GetAllFood());
+        }
+        [HttpGet]
+        public IActionResult Food()
+        {
+            
+            return Json(foodService.GetAllFood());
         }
 
         public IActionResult AboutUs()
