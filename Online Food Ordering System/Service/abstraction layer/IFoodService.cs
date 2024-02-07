@@ -6,5 +6,6 @@ namespace Online_Food_Ordering_System.Service.abstraction_layer
     public interface IFoodService
     {
         List<FoodCardVeiwModel>? GetAllFood();
+        List<FoodCardVeiwModel>? GetByCTypeId(int id);
     }
 }

@@ -1,18 +1,20 @@
-﻿
+﻿@using Online_Food_Ordering_System.Views
+@model CTypeFilterViewModel
 
-
-@{
-    List<string> foodList = new List<string>{"Healthy Food","Snack","Dessert","Japanese","Indian","French","Mexican","Italian","Chinese","Beverage","Thai","Korean","Vietnames","Nepalese","Spanish" };  
-
-}
-
-
-<div class="filter-container">
+<form class="filter-container">
     
-    <button class="filter-craitaria filter-craitaria-selected"> All </button>
-@foreach (var item in foodList)
+    @{
+        string status = (Model.SelectedTypeId == 0 ? "filter-craitaria-selected" : "filter-craitaria-unselected");
+    }
+    
+
+    <button type="submit" name="id" value="0" class="filter-craitaria @status"> All </button>
+
+@foreach (var item in Model.cTypes)
 {
-        <button class="filter-craitaria filter-craitaria-unselected"> @item </button>
+
+        status = (Model.SelectedTypeId == item.CTypeId ? "filter-craitaria-selected" : "filter-craitaria-unselected");
+        <button type="submit" name="id" value="@item.CTypeId" class="filter-craitaria @status"> @item.Type </button>
 }
-</div>
+</form>
 

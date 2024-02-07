@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Online_Food_Ordering_System.Models;
 using Online_Food_Ordering_System.Service.abstraction_layer;
+using Online_Food_Ordering_System.Views;
 using System.CodeDom;
 using System.Diagnostics;
 
@@ -11,24 +12,28 @@ namespace Online_Food_Ordering_System.Controllers
     public class HomeController : Controller
     {
         private readonly IFoodService foodService;
+        private readonly ICTypeService cTypeService;
 
         public HomeController(IFoodService foodService , ICTypeService cTypeService)
         {
             this.foodService = foodService;
+            this.cTypeService = cTypeService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
-            
-            return View(foodService.GetAllFood());
-        }
-        [HttpGet]
-        public IActionResult Food()
-        {
-            
-            return Json(foodService.GetAllFood());
-        }
+            ViewBag.Filler = cTypeService.GetAllCType(id);
+            if (id == 0)
+            {
+                return View(foodService.GetAllFood());
 
+            }
+            else {
+                return View(foodService.GetByCTypeId(id));
+            }
+
+        }
+       
         public IActionResult AboutUs()
         {
             List<Advantage> advantages = new List<Advantage>();

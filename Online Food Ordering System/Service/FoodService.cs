@@ -34,5 +34,27 @@ namespace Online_Food_Ordering_System.Service
 
             return foodCards;
         }
+
+        public List<FoodCardVeiwModel>? GetByCTypeId(int id)
+        {
+            List<FoodCardVeiwModel> foodCards = new List<FoodCardVeiwModel>();
+
+            foreach (var item in foodRepository.GetByCTypeId(id))
+            {
+                FoodCardVeiwModel foodCard = new FoodCardVeiwModel()
+                {
+                    Name = item.Name,
+                    Price = item.Price,
+                    VegType = item.Veg.Type,
+                    CType = item.CType.Type,
+                    Image = item.Image,
+                    AvargeRating = 4.5m
+                };
+
+                foodCards.Add(foodCard);
+            }
+
+            return foodCards;
+        }
     }
 }

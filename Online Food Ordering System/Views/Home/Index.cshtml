@@ -1,8 +1,10 @@
 ﻿@using Online_Food_Ordering_System.View_Models
+@using Online_Food_Ordering_System.Views
 @model List<FoodCardVeiwModel>
 
 @{
     ViewData["Title"] = "Home Page";
+    CTypeFilterViewModel FillerModel = ViewBag.Filler;
 }
 
 <link rel="stylesheet" href="~/css/ProductCardPartial.css" asp-append-version="true" />
@@ -29,7 +31,7 @@
 
 <div class="home-container">
 
-    <partial name="FilterPartial" />
+    <partial name="FilterPartial" model="FillerModel" />
 
 
     <div class="product-container" id="productContainer">

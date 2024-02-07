@@ -11,6 +11,10 @@ namespace Online_Food_Ordering_System.Repository
             context = _context;
         }
 
+        public FoodRepository()
+        {
+        }
+
         public List<Food> GetAll()
         {
             return context.Foods.ToList();
@@ -39,6 +43,9 @@ namespace Online_Food_Ordering_System.Repository
             context.Foods.Remove(old);
             context.SaveChanges();
         }
-
+        public List<Food> GetByCTypeId(int id)
+        {
+            return context.Foods.Where(x => x.CTypeId == id).ToList();
+        }
     }
 }
