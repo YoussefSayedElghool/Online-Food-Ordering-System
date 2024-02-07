@@ -66,7 +66,7 @@ namespace Online_Food_Ordering_System.Controllers
             //create account
             User userModel = new User()
             {
-                UserName = newUserVM.Name,
+                DisplayName = newUserVM.Name,
                 Email = newUserVM.Email,
                 PasswordHash = newUserVM.Password,
                 Address = newUserVM.Address
