@@ -106,6 +106,12 @@ namespace Online_Food_Ordering_System.Controllers
         {
             await signInMAnager.SignOutAsync();
             return RedirectToAction("Login", "Account");
+        }        
+        
+       
+        public async Task<IActionResult> Profile()
+        {
+            return PartialView();
         }
 
 

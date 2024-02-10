@@ -1,0 +1,47 @@
+﻿
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/Profile.css" asp-append-version="true" />
+
+<div class="Profile-container">
+
+    <section class="Profile-Section profile-user-container">
+
+        <div class="profile-user-img">
+            <img class="profile-user-name" src="~/img/Users/Elghool1.jpg" />
+        </div>
+
+        <div class="profile-user-info">
+
+            <h1 class="profile-user-name">YousefElghool</h1>
+            <h1 class="profile-user-email">YousefElghool@gmail.com</h1>
+
+        </div>
+
+
+    </section>
+
+
+    <section class="profile-options-container Profile-Section">
+        <a asp-controller="Account" asp-action="Profile">
+        <div class="profile-options">
+        <img class="profile-options-img" src="~/img/settings.png" />
+            <h1 class="profile-option-name">Settings</h1>
+        </div>
+        </a>
+    </section>
+    
+    <section class="profile-options-container Profile-Section">
+        <a asp-controller="Account" asp-action="Logout">
+        <div class="profile-options">
+            <img class="profile-options-img" src="~/img/logout.png" />
+            <h1 class="profile-option-name">Logout</h1>
+        </div>
+        </a>
+    </section>
+
+
+  
+
+
+
+</div>
