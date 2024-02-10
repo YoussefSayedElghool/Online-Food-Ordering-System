@@ -1,0 +1,49 @@
+﻿@using Online_Food_Ordering_System.View_Models
+@using Online_Food_Ordering_System.Views
+@model List<FoodCardVeiwModel>
+
+@{
+    ViewData["Title"] = "Cart Page";
+}
+
+<link rel="stylesheet" href="~/css/CartItemPartial.css" asp-append-version="true" />
+
+
+<style>
+
+    .product-container {
+        width: 100%;
+        height: 430px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        overflow: auto;
+        align-items: center;
+    }
+
+    .home-container {
+        margin: 50px;
+        margin-top: 30px;
+    }
+
+</style>
+
+<div class="home-container">
+
+    <div class="product-container" id="productContainer">
+
+        @foreach (FoodCardVeiwModel item in @Model)
+        {
+
+            <partial name="CartItemPartial" model="item" />
+
+        }
+    </div>
+
+    <footer class="checkout-container">
+            <h1 class="total-price-header">Total Price</h1>
+            <h1 class="total-price">899.1$</h1>
+        <button type="submit" class="checkout-button">Checkout</button>
+
+    </footer>
+</div>

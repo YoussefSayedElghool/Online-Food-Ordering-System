@@ -1,0 +1,34 @@
+﻿@using Online_Food_Ordering_System.View_Models
+@model FoodCardVeiwModel
+
+
+<div class="product-card" id="card">
+
+    <div class="product-details">
+
+        <div class="details-top-section">
+            <div class="rating-container">
+                <img src="~/img/Remove.png" class="stare" />
+            </div>
+
+           
+        </div>
+
+        <div class="product-name">@Model.Name</div>
+
+        <div class="details-down-section">
+            <div class="proudect-price">@Model.Price$</div>
+            <div class="proudect-price">x</div>
+            <input value="1" type="number" class="add-to-cart-button" />
+            <div class="proudect-price">=</div>
+            <div class="proudect-price">@Model.Price$</div>
+
+
+        </div>
+
+
+    </div>
+    
+    <img src="@(Model.Image.Replace("~" , ""))" class="food-imge" />
+</div>
+

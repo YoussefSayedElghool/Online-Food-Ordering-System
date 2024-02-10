@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\css\CartItemPartial.css" />
     <Content Remove="wwwroot\css\FilterPartial.css" />
     <Content Remove="wwwroot\css\FooterPartial.css" />
     <Content Remove="wwwroot\css\Formes.css" />
@@ -19,6 +20,7 @@
   <ItemGroup>
     <None Include="wwwroot\css\FilterPartial.css" />
     <None Include="wwwroot\css\FooterPartial.css" />
+    <None Include="wwwroot\css\CartItemPartial.css" />
     <None Include="wwwroot\css\Profile.css" />
     <None Include="wwwroot\css\Formes.css" />
     <None Include="wwwroot\css\SectionPartial.css" />
