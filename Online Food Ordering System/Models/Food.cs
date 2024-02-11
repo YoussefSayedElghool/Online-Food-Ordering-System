@@ -19,7 +19,8 @@ namespace Online_Food_Ordering_System.Models
         public virtual Veg Veg { get; set; } = null!;
 
         public virtual List<Rating> Ratings { get; } = [];
-        public virtual List<Order> Orders { get; } = [];
+        public virtual List<Cart> Carts { get; } = [];
+        public virtual List<FoodInvoice> FoodInvoices { get; } = [];
 
     }
 }
