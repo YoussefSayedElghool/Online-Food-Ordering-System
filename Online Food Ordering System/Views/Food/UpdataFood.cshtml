@@ -1,0 +1,44 @@
+﻿@using Online_Food_Ordering_System.View_Models
+@using Online_Food_Ordering_System.Views
+@model List<FoodCardVeiwModel>
+@{
+    Layout = "_DashboardLayout";
+}
+
+<link rel="stylesheet" href="~/css/ProductCardPartial.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/FilterPartial.css" asp-append-version="true" />
+
+
+<style>
+
+    .product-container {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        overflow: auto;
+    }
+
+    .home-container {
+        margin: 50px;
+        margin-top: 30px;
+    }
+
+</style>
+
+<div class="home-container">
+
+    <div class="product-container" id="productContainer">
+
+        @foreach (FoodCardVeiwModel item in @Model)
+        {
+            <a asp-controller="Food" asp-action="updatafood" asp-route-id="@item.FoodId">
+            <partial name="ProductCardPartial" model="item" />
+            </a>
+        }
+
+
+
+    </div>
+</div>

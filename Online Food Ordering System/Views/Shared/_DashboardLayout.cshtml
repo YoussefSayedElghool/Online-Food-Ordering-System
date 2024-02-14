@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Online_Food_Ordering_System</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @RenderSection("Stylesheet", required: false)
+    <style>
+
+
+    </style>
+</head>
+<body>
+
+    @* <partial name="_DashboardHeader" /> *@
+    <partial name="_HeaderPartial" />
+    <div class="flex-no-top-left">
+        <aside>
+            <partial name="_AsidePartial" />
+        </aside>
+        <main role="main" class="main">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

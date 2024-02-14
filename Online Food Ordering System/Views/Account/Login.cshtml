@@ -5,8 +5,7 @@
 <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 <link rel="stylesheet" href="~/css/Formes.css" asp-append-version="true" />
 
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<partial name="_ValidationScriptsPartial" />
+
 
 <div class="form-container">
 
@@ -24,11 +23,11 @@
 
 
             <label asp-for="Email"></label>
-            <input asp-for="Email" placeholder="Enter yor email" />
+            <input class="input"  asp-for="Email" placeholder="Enter yor email" />
             <span asp-validation-for="Email"></span>
 
             <label asp-for="Password"></label>
-            <input asp-for="Password" />
+            <input class="input"  asp-for="Password" />
             <span asp-validation-for="Password"></span>
 
             @* <input type="email" asp-controller="Home" asp-action="Index" placeholder="Enter yor email" />
@@ -47,3 +46,8 @@
  
      </form>
 </div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+}

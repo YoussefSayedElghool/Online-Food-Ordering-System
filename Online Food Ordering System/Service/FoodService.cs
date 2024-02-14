@@ -1,4 +1,5 @@
-﻿using Online_Food_Ordering_System.Repository;
+﻿using Online_Food_Ordering_System.Models;
+using Online_Food_Ordering_System.Repository;
 using Online_Food_Ordering_System.Service.abstraction_layer;
 using Online_Food_Ordering_System.View_Models;
 using System.Collections.Generic;
@@ -13,6 +14,17 @@ namespace Online_Food_Ordering_System.Service
         {
             this.foodRepository = foodRepository;
         }
+
+        public void Delete(int id)
+        {
+            foodRepository.Delete(id);
+        }
+
+        public void Edit(Food item)
+        {
+            foodRepository.Edit(item);
+        }
+
         public List<FoodCardVeiwModel>? GetAllFood()
         {
             List<FoodCardVeiwModel> foodCards = new List<FoodCardVeiwModel>();
@@ -21,6 +33,7 @@ namespace Online_Food_Ordering_System.Service
             {
                 FoodCardVeiwModel foodCard = new FoodCardVeiwModel()
                 {
+                    FoodId =item.FoodId,
                     Name = item.Name,
                     Price = item.Price,
                     VegType = item.Veg.Type,
@@ -43,6 +56,7 @@ namespace Online_Food_Ordering_System.Service
             {
                 FoodCardVeiwModel foodCard = new FoodCardVeiwModel()
                 {
+                    FoodId =item.FoodId,
                     Name = item.Name,
                     Price = item.Price,
                     VegType = item.Veg.Type,
@@ -55,6 +69,16 @@ namespace Online_Food_Ordering_System.Service
             }
 
             return foodCards;
+        }
+
+        public Food GetById(int id)
+        {
+           return foodRepository.GetById(id);
+        }
+
+        public void Insert(Food item)
+        {
+            foodRepository.Insert(item);
         }
     }
 }

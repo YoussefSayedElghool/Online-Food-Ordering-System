@@ -4,6 +4,7 @@ namespace Online_Food_Ordering_System.View_Models
 {
     public class FoodCardVeiwModel
     {
+        public required int FoodId { get; set; }
         public required string Name { get; set; }
         public required decimal Price { get; set; }
         public required decimal AvargeRating { get; set; }

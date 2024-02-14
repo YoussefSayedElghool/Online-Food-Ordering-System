@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Shared\_DashboardHeader.cshtml" />
     <Content Remove="wwwroot\css\CartItemPartial.css" />
     <Content Remove="wwwroot\css\FilterPartial.css" />
     <Content Remove="wwwroot\css\FooterPartial.css" />
@@ -15,6 +16,8 @@
     <Content Remove="wwwroot\css\ProductCardPartial.css" />
     <Content Remove="wwwroot\css\Profile.css" />
     <Content Remove="wwwroot\css\SectionPartial.css" />
+    <Content Remove="wwwroot\css\_AsidePartial.css" />
+    <Content Remove="wwwroot\css\_DashboardHeader.css" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,11 +28,13 @@
     <None Include="wwwroot\css\Formes.css" />
     <None Include="wwwroot\css\SectionPartial.css" />
     <None Include="wwwroot\css\ProductCardPartial.css" />
+    <None Include="wwwroot\css\_AsidePartial.css" />
+    <None Include="wwwroot\css\_DashboardHeader.css" />
     <None Include="wwwroot\css\_HeaderPartial.css" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
@@ -37,7 +42,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.1" />
     <PackageReference Include="NanoXLSX" Version="2.3.1" />
   </ItemGroup>
 

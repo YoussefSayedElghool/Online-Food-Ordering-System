@@ -58,7 +58,7 @@
     margin: 20px 0px;
 }
 
-.form input {
+.input {
     width: 50%;
     height: 30px;
     padding: 14px;
@@ -86,4 +86,8 @@
 
 ::-ms-input-placeholder { /* Edge 12 -18 */
     color: red;
+}
+
+input[type="file"] {
+    display: none;
 }
