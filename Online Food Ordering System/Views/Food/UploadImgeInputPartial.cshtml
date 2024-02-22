@@ -1,0 +1,60 @@
+﻿@using Online_Food_Ordering_System.View_Models
+@model IImageFile
+
+
+<label asp-for="@Model.ImageFile" for="images" class="drop-container" id="dropcontainer">
+    <div>
+    @foreach (var item in (@Model.OldImages != null ? @Model.OldImages : new List<string>()))
+    {
+        <img  src="@Model.ImageSrc" style="height:100px; width:100px;">
+    }
+    </div>
+    <img id='output' src="@Model.ImageSrc" style="height:200px; width:100%;">
+
+    <span class="drop-title">Drop files here</span>
+    or
+    <input type="file" id="images" asp-for="@Model.ImageFile" placeholder="image" accept="image/png, image/jpeg" onchange='openFile()' />
+</label>
+
+
+
+   
+    <script>
+        const dropContainer = document.getElementById("dropcontainer");
+        const fileInput = document.getElementById("images");
+
+        var openFile = function () {
+        var input = fileInput;
+            var reader = new FileReader();
+            reader.onload = function () {
+                var dataURL = reader.result;
+            var output = document.getElementById("output");
+                output.src = dataURL;
+            };
+            reader.readAsDataURL(input.files[0]);
+        };
+
+
+    
+
+        dropContainer.addEventListener("dragover", (e) => {
+            // prevent default to allow drop
+            e.preventDefault()
+        }, false)
+
+        dropContainer.addEventListener("dragenter", () => {
+            dropContainer.classList.add("drag-active")
+        })
+
+        dropContainer.addEventListener("dragleave", () => {
+            dropContainer.classList.remove("drag-active")
+        })
+
+        dropContainer.addEventListener("drop", (e) => {
+            e.preventDefault();
+            dropContainer.classList.remove("drag-active");
+            fileInput.files = e.dataTransfer.files;
+            openFile();
+        })
+    </script>
+

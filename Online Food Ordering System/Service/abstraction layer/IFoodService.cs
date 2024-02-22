@@ -11,5 +11,8 @@ namespace Online_Food_Ordering_System.Service.abstraction_layer
         void Insert(Food item);
         void Edit(Food item);
         void Delete(int id);
+        FoodForm InitializedFoodFormWithData(Food food);
+        FoodForm InitializedFoodFormWithData();
+        Food CreateFood(FoodForm foodForm);
     }
 }

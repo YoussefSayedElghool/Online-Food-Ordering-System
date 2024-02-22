@@ -1,5 +1,5 @@
 ﻿@using Online_Food_Ordering_System.View_Models
-@model Food
+@model FoodForm
 
 @{
     Layout = "_DashboardLayout";
@@ -7,45 +7,12 @@
 
 
 
-
-
-
 <div class="form-container">
 
-    <form asp-controller="Food" asp-action="AddFood" method="post" class="form" role="form">
-
-        <div class="form-input-container">
-            <div asp-validation-summary="All" class="text-danger"></div>
-
-            <label asp-for="Name"></label>
-            <input class="input"  asp-for="Name" placeholder="food name" />
-            <span asp-validation-for="Name"></span>
-            
-            <label asp-for="Price"></label>
-            <input class="input"  asp-for="Price" placeholder="food price" />
-            <span asp-validation-for="Price"></span>
-
-            <label asp-for="VegId"></label>
-            <input class="input"  asp-for="VegId" placeholder="this food is vegetarian?" />
-            <span asp-validation-for="VegId"></span>
-
-            <label asp-for="CTypeId"></label>
-            <input class="input"  asp-for="CTypeId" placeholder="chooes food type" />
-            <span asp-validation-for="CTypeId"></span>
-
-            <label asp-for="Description"></label>
-            <textarea class="input" asp-for="Description" placeholder="Description"></textarea>
-            <span asp-validation-for="Description"></span>
+    <form asp-controller="Food" asp-action="AddFood" method="post" class="form" role="form" enctype="multipart/form-data">
 
 
-            <label class="btn" asp-for="Image">
-                Select Image
-            <input type="file" asp-for="Image" placeholder="image" />
-            </label>
-            <span asp-validation-for="Image"></span>
-         
-
-        </div>
+        <partial name="FoodFormPartial" model="Model" />
 
         <button type="submit" class="form-button">Add a food</button>
 
@@ -62,5 +29,4 @@
 @section Stylesheet {
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Formes.css" asp-append-version="true" />
-
 }

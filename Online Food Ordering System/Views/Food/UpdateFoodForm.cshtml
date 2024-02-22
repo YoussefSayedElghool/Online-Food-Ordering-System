@@ -1,0 +1,32 @@
+﻿@using Online_Food_Ordering_System.View_Models
+@model FoodForm
+
+@{
+    Layout = "_DashboardLayout";
+}
+
+
+
+<div class="form-container">
+
+    <form asp-controller="Food" asp-action="UpdateFoodForm" method="post" class="form" role="form" enctype="multipart/form-data">
+
+
+        <partial name="FoodFormPartial" model="Model" />
+
+        <button type="submit" class="form-button">Update</button>
+
+
+    </form>
+</div>
+
+
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+}
+@section Stylesheet {
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Formes.css" asp-append-version="true" />
+}

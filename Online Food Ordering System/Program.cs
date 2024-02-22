@@ -33,6 +33,7 @@ namespace Online_Food_Ordering_System
             builder.Services.AddScoped<IFoodService, FoodService>();
             builder.Services.AddScoped<ICTypeRepository, CTypeRepository>();
             builder.Services.AddScoped<ICTypeService, CTypeService>();
+            builder.Services.AddScoped<IVegTypeRepository, VegTypeRepository>();
 
             var app = builder.Build();
 

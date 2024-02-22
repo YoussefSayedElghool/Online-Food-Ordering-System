@@ -2,13 +2,13 @@
 @model FoodCardVeiwModel
 
 
-<div class="product-card" id="card">
+<div class="product-card" id="@Model.FoodId">
 
     <div class="product-details">
 
         <div class="details-top-section">
             <div class="rating-container">
-                <img src="~/img/stare.png" class="stare" />
+                <img src="~/Images/stare.png" class="stare" />
                 <span class="rating">@Model.AvargeRating</span>
             </div>
 
@@ -24,7 +24,7 @@
         <div class="details-down-section">
             <div class="proudect-price">@Model.Price</div>
             <button class="add-to-cart-button">
-                <img src="~/img/add-to-cart.png" style="height:21px" />
+                <img src="~/Images/add-to-cart.png" style="height:21px" />
             </button>
         </div>
 

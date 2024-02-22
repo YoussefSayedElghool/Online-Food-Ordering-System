@@ -10,7 +10,7 @@
     font-weight:normal;
 }
 html {
-    height: calc(100% - 50px);
+   
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 }
 
 main {
-    height: 100%;
+    height: calc(100vh - 50px);
     width: 100vw;
 }
 
@@ -73,10 +73,18 @@ a:active {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    align-items: flex-start;
     justify-content: flex-start;
+    align-items: flex-start;
 }
-.btn {
+
+.flex-no-normal-left {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: normal;
+}
+    .btn {
     text-align: center;
     padding: 5px 10px;
     margin: 5px;

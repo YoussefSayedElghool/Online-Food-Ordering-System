@@ -17,7 +17,7 @@ namespace Online_Food_Ordering_System.Repository
 
         public List<Food> GetAll()
         {
-            return context.Foods.ToList();
+            return context.Foods.Where(f => f.IsVisible).ToList();
         }
         public Food GetById(int id)
         {

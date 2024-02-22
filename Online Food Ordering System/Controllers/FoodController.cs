@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Humanizer;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Online_Food_Ordering_System.Models;
 using Online_Food_Ordering_System.Service.abstraction_layer;
+using Online_Food_Ordering_System.View_Models;
 
 namespace Online_Food_Ordering_System.Controllers
 {
@@ -16,48 +19,65 @@ namespace Online_Food_Ordering_System.Controllers
         public IActionResult UpdataFood()
         {
             return View(foodService.GetAllFood());
-        }        
-        
-        [HttpPost]
-        public IActionResult UpdataFood(int id)
+        }
+
+
+
+
+        [HttpGet]
+        public IActionResult UpdateFoodForm(int id)
         {
-           Food food = foodService.GetById(id);
-            foodService.Edit(food);
-            return RedirectToAction("");
-        }        
-        
+            Food food = foodService.GetById(id);
+            return View(foodService.InitializedFoodFormWithData(food));
+        }
+
+        [HttpPost]
+        public IActionResult UpdateFoodForm(FoodForm foodForm)
+        {
+
+            if (!ModelState.IsValid) return RedirectToAction("UpdataFood", "Food");
+
+            try
+            {
+                foodService.Edit(foodService.CreateFood(foodForm));
+                //return RedirectToAction("UpdataFood", "Food");
+                return RedirectToAction("UpdataFood", "Food" , fragment : $"{foodForm.FoodId}");
+            }
+            catch (Exception)
+            {
+
+                ModelState.AddModelError("", "there are Error happened, please review the content and internet connection and try again");
+                return View(foodForm);
+            }
+        }
+
+
+
         [HttpGet]
         public IActionResult AddFood()
         {
-                return View();
+            return View(foodService.InitializedFoodFormWithData());
         }
 
-         [HttpPost]
-        public IActionResult AddFood(Food food)
+        [HttpPost]
+        public IActionResult AddFood(FoodForm foodForm)
         {
-            if (!ModelState.IsValid)
+
+            if (!ModelState.IsValid) return RedirectToAction("AddFood");
+
+            try
             {
-                return View(food);
+                foodService.Insert(foodService.CreateFood(foodForm));
+                return RedirectToAction("AddFood");
             }
-            else {
+            catch (Exception)
+            {
 
-                try
-                {
-                    foodService.Insert(food);
-                    return RedirectToAction("AddFood");
-                }
-                catch (Exception)
-                {
-
-                    ModelState.AddModelError("", "there are Error happened, please review the content and internet connection and try again");
-                    return View(food);
-                }
+                ModelState.AddModelError("", "there are Error happened, please review the content and internet connection and try again");
+                return View(foodForm);
             }
-
-
-           
-
         }
+
 
 
     }

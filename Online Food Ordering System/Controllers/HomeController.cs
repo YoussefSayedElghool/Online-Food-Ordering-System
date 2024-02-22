@@ -47,7 +47,7 @@ namespace Online_Food_Ordering_System.Controllers
             Advantage advantage1 = new Advantage { 
                 title= "very high quality",
                 pahpargraph= "We work hard with the latest technology\r\n                and the most skilled chefs to increase\r\n                quality and provide you with the best service",
-                imge = "img/chaif.png",
+                imge = "Images/chaif.png",
                 dirction=Dirction.right
                 
             };
@@ -56,7 +56,7 @@ namespace Online_Food_Ordering_System.Controllers
             {
                 title = "very fast delever",
                 pahpargraph = "We have a team \r\nof the fastest Delivery\r\n Drivers and branches all over the world",
-                imge = "img/delevary deriver.png",
+                imge = "Images/delevary deriver.png",
                 dirction = Dirction.left
 
             };
@@ -65,7 +65,7 @@ namespace Online_Food_Ordering_System.Controllers
             {
                 title = "Be Happy",
                 pahpargraph = "Our goal is to make \r\nyou happy so smile",
-                imge = "img/logo_icon.png",
+                imge = "Images/logo_icon.png",
                 dirction = Dirction.right
 
             };

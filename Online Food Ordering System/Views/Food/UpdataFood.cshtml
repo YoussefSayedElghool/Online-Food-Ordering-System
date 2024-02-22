@@ -33,7 +33,7 @@
 
         @foreach (FoodCardVeiwModel item in @Model)
         {
-            <a asp-controller="Food" asp-action="updatafood" asp-route-id="@item.FoodId">
+            <a asp-controller="Food" asp-action="UpdateFoodForm" asp-route-id="@item.FoodId">
             <partial name="ProductCardPartial" model="item" />
             </a>
         }

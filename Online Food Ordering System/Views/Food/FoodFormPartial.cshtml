@@ -1,0 +1,69 @@
+﻿@using Online_Food_Ordering_System.View_Models
+@model FoodForm
+
+@{
+    List<SelectListItem> selectListCTypes = new List<SelectListItem>();
+    List<SelectListItem> selectListVegType = new List<SelectListItem>();
+
+    foreach (var item in Model.CTypes)
+    {
+        SelectListItem selectListItem = new SelectListItem() { Value = item.CTypeId.ToString(), Text = item.Type };
+        selectListCTypes.Add(selectListItem);
+    }
+
+    foreach (var item in Model.Vegs)
+    {
+        SelectListItem selectListItem = new SelectListItem() { Value = item.VegId.ToString(), Text = item.Type };
+        selectListVegType.Add(selectListItem);
+    }
+}
+
+
+<div class="flex-no-normal-left">
+
+    <partial name="UploadImgeInputPartial" model="Model" />
+
+    <span asp-validation-for="ImageFile"></span>
+
+    <div class="form-input-container">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <label asp-for="IsVisible"></label>
+
+        <label class="switch">
+            <input class="input" asp-for="IsVisible" placeholder="food name" />
+            <span class="slider round"></span>
+        </label>
+
+        <input type="hidden" asp-for="FoodId"/>
+        <input type="hidden" asp-for="ImageSrc"/>
+
+        <span asp-validation-for="IsVisible"></span>
+
+
+        <label asp-for="Name"></label>
+        <input class="input" asp-for="Name" placeholder="food name" />
+        <span asp-validation-for="Name"></span>
+
+        <label asp-for="Price"></label>
+        <input class="input" asp-for="Price" placeholder="food price" />
+        <span asp-validation-for="Price"></span>
+
+        <label asp-for="VegId"></label>
+        <select class="input" asp-for="VegId" asp-items="@(selectListVegType)">
+            <option selected>select vegetarian type</option>
+        </select>
+        <span asp-validation-for="VegId"></span>
+
+        <label asp-for="CTypeId"></label>
+        <select class="input" asp-for="CTypeId" asp-items="@(selectListCTypes)">
+            <option selected>chooes food type</option>
+        </select>
+        <span asp-validation-for="CTypeId"></span>
+
+        <label asp-for="Description"></label>
+        <textarea class="input" asp-for="Description" placeholder="Description"></textarea>
+        <span asp-validation-for="Description"></span>
+
+    </div>
+
+</div>
