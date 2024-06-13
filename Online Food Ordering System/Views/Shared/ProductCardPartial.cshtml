@@ -1,6 +1,7 @@
 ﻿@using Online_Food_Ordering_System.View_Models
 @model FoodCardVeiwModel
 
+<form asp-controller="Cart" asp-action="Add" method="post" class="form" role="form" enctype="multipart/form-data">
 
 <div class="product-card" id="@Model.FoodId">
 
@@ -23,7 +24,9 @@
 
         <div class="details-down-section">
             <div class="proudect-price">@Model.Price</div>
-            <button class="add-to-cart-button">
+            </input>
+                <input type="hidden" asp-for="FoodId">
+            <button type="submit" class="add-to-cart-button">
                 <img src="~/Images/add-to-cart.png" style="height:21px" />
             </button>
         </div>
@@ -33,4 +36,5 @@
     
     <img src="@(Model.Image.Replace("~" , ""))" class="food-imge" />
 </div>
+</form>
 

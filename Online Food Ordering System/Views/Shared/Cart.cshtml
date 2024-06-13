@@ -1,6 +1,6 @@
 ﻿@using Online_Food_Ordering_System.View_Models
 @using Online_Food_Ordering_System.Views
-@model List<FoodCardVeiwModel>
+@model List<CartItemVeiwModel>
 
 @{
     ViewData["Title"] = "Cart Page";
@@ -31,19 +31,39 @@
 <div class="home-container">
 
     <div class="product-container" id="productContainer">
+        @{
+           decimal TotalPrice = 0m;
+        }
 
-        @foreach (FoodCardVeiwModel item in @Model)
+        @foreach (CartItemVeiwModel item in Model)
         {
 
             <partial name="CartItemPartial" model="item" />
-
+            TotalPrice += item.Quntity * item.Price;
         }
     </div>
 
     <footer class="checkout-container">
             <h1 class="total-price-header">Total Price</h1>
-            <h1 class="total-price">899.1$</h1>
+        <h1 class="total-price">@TotalPrice$</h1>
         <button type="submit" class="checkout-button">Checkout</button>
 
     </footer>
 </div>
+
+
+@section Scripts {
+    <script>
+        function UpdateQuntity(e) {
+            let submitButton = document.getElementById("quntityButton");
+            if (e.value > 1) {
+
+                e.parentElement.submit();
+            } else { 
+                e.value = 1;
+            }
+        }
+
+
+    </script>
+}

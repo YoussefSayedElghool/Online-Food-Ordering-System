@@ -35,11 +35,6 @@ namespace Online_Food_Ordering_System.Controllers
         }
 
 
-        public IActionResult Cart()
-        {
-            return View(foodService.GetAllFood());
-
-        }
 
         public IActionResult AboutUs()
         {

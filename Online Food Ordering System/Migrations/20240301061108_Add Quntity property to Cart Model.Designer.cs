@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Online_Food_Ordering_System.Models;
 
@@ -11,9 +12,11 @@ using Online_Food_Ordering_System.Models;
 namespace Online_Food_Ordering_System.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240301061108_Add Quntity property to Cart Model")]
+    partial class AddQuntitypropertytoCartModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -177,7 +180,7 @@ namespace Online_Food_Ordering_System.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Invoices", (string)null);
+                    b.ToTable("Invoices");
                 });
 
             modelBuilder.Entity("Online_Food_Ordering_System.Models.CType", b =>
@@ -194,7 +197,7 @@ namespace Online_Food_Ordering_System.Migrations
 
                     b.HasKey("CTypeId");
 
-                    b.ToTable("CTypes", (string)null);
+                    b.ToTable("CTypes");
                 });
 
             modelBuilder.Entity("Online_Food_Ordering_System.Models.Cart", b =>
@@ -219,10 +222,9 @@ namespace Online_Food_Ordering_System.Migrations
 
                     b.HasIndex("FoodId");
 
-                    b.HasIndex("UserId", "FoodId")
-                        .IsUnique();
+                    b.HasIndex("UserId");
 
-                    b.ToTable("Carts", (string)null);
+                    b.ToTable("Carts");
                 });
 
             modelBuilder.Entity("Online_Food_Ordering_System.Models.Food", b =>
@@ -263,7 +265,7 @@ namespace Online_Food_Ordering_System.Migrations
 
                     b.HasIndex("VegId");
 
-                    b.ToTable("Foods", (string)null);
+                    b.ToTable("Foods");
                 });
 
             modelBuilder.Entity("Online_Food_Ordering_System.Models.FoodInvoice", b =>
@@ -289,7 +291,7 @@ namespace Online_Food_Ordering_System.Migrations
 
                     b.HasIndex("InvoiceId");
 
-                    b.ToTable("FoodInvoices", (string)null);
+                    b.ToTable("FoodInvoices");
                 });
 
             modelBuilder.Entity("Online_Food_Ordering_System.Models.Rating", b =>
@@ -313,7 +315,7 @@ namespace Online_Food_Ordering_System.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Ratings", (string)null);
+                    b.ToTable("Ratings");
                 });
 
             modelBuilder.Entity("Online_Food_Ordering_System.Models.User", b =>
@@ -407,7 +409,7 @@ namespace Online_Food_Ordering_System.Migrations
 
                     b.HasKey("VegId");
 
-                    b.ToTable("Vegs", (string)null);
+                    b.ToTable("Vegs");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
