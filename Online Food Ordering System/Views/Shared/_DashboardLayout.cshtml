@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Online_Food_Ordering_System</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/_AsidePartial.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/_AsideOprationPartial.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/_DashboardLayout.css" asp-append-version="true" />
+
+
     @RenderSection("Stylesheet", required: false)
     <style>
 
@@ -13,15 +18,18 @@
 </head>
 <body>
 
-    @* <partial name="_DashboardHeader" /> *@
-    <partial name="_HeaderPartial" />
+    
+
     <div class="flex-no-top-left">
-        <aside>
-            <partial name="_AsidePartial" />
-        </aside>
-        <main role="main" class="main">
-            @RenderBody()
-        </main>
+        <partial name="_AsidePartial" />
+
+        <div class="main-container">
+            <partial name="_DashboadHeaderPartial" />    
+            <main role="main" class="main">
+                @RenderBody()
+            </main>
+        </div>
+
     </div>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

@@ -1,18 +1,40 @@
 ﻿.aside-container {
     display: flex;
     height: 100vh;
-    width: 161px;
-    margin: 5px;
-    padding: 10px;
+    width: 298px;
+    /* margin: 5px; */
+    padding: 10px 20px 10px 27px;
     flex-direction: column;
     flex-wrap: nowrap;
     background: white;
     justify-content: flex-start;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border-radius: 15px;
+    border-radius: 0px 15px 15px 0px;
     align-items: flex-start;
 }
 
-.dashboad-opration {
-width:100%
+.aside-container a{
+    width: 100%
 }
+
+
+.aside-logo {
+    width: 55px;
+    height: 55px;
+}
+
+.aside-brand-name {
+    font-family: grandhotel-regular, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+
+
+.aside-logo-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+

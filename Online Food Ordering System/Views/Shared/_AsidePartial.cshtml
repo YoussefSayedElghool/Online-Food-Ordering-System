@@ -1,22 +1,29 @@
-﻿
+﻿@{
+    DashboadOpration Statistics = new DashboadOpration() { Imge = @"\images\assets\stat_dashboard.png", Title = "Statistics" };
+    DashboadOpration FoodEdit = new DashboadOpration() { Imge = @"\images\assets\fast-food.png", Title = "Food Edit" };
+    DashboadOpration Orders = new DashboadOpration() { Imge = @"\images\assets\list.png", Title = "Orders" };
+}
 
 
-<link rel="stylesheet" href="~/css/_AsidePartial.css" asp-append-version="true" />
+<aside class="aside-container">
 
-<nav class="aside-container">
+    <div class="aside-logo-container">
+        <img src="~/Images/logo_full.png" class="aside-logo" />
 
-    <a asp-controller="Food" asp-action="UpdataFood">
-        <button class="btn dashboad-opration">update food</button>
+        <h1 class="aside-brand-name">Elghool Food</h1>
+
+    </div>
+
+    <a asp-controller="Dashboad" asp-action="Statistics">
+        <partial name="_AsideOprationPartial" model="Statistics" />
     </a>
-    <a asp-controller="Food" asp-action="AddFood">
-        <button class="btn dashboad-opration">add new food</button>
+    <a asp-controller="Dashboad" asp-action="FoodEdit">
+        <partial name="_AsideOprationPartial" model="FoodEdit" />
     </a>
 
-    <a asp-controller="Food" asp-action="AddFood">
-        <button class="btn dashboad-opration">orders</button>
+    <a asp-controller="Dashboad" asp-action="Orders">
+        <partial name="_AsideOprationPartial" model="Orders" />
     </a>
-    <a asp-controller="Food" asp-action="AddFood">
-        <button class="btn dashboad-opration">users statistics</button>
-    </a>
-</nav>
+</aside>
+
 

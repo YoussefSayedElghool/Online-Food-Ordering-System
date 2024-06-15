@@ -1,0 +1,22 @@
+﻿.dashboad-opration {
+    background: transparent;
+}
+
+
+.dashboad-opration-container {
+    width: 100%;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 14px;
+    margin-bottom: 17px;
+}
+
+.dashboad-opration-container img {
+    width: 37px;
+}
+
+

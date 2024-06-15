@@ -1,0 +1,57 @@
+﻿.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    padding: 8px 17px 0px 17px;
+}
+
+.profile-user-name {
+    font-size: 15px;
+    font-family: 'Space Grotesk';
+    font-weight: bold;
+}
+
+.profile-user-email {
+    font-family: 'Space Grotesk';
+    font-size: 10px;
+    font-weight: bold;
+}
+.profile-user-role {
+    font-family: 'Space Grotesk';
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+.user-profile {
+    background-color: #FFFF;
+    width: 200px;
+    height: 75px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.div-container {
+    display: flex;
+    align-items: center;
+}
+.nav-title {
+    font-family: Bahnschrift, 'Times New Roman', Times, serif;
+    color: #000;
+    font-size: 21px;
+}
+
+
+
+.user-image {
+    width: 30px;
+    height: 30px;
+}

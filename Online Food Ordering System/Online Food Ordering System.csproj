@@ -16,8 +16,11 @@
     <Content Remove="wwwroot\css\ProductCardPartial.css" />
     <Content Remove="wwwroot\css\Profile.css" />
     <Content Remove="wwwroot\css\SectionPartial.css" />
+    <Content Remove="wwwroot\css\_AsideOprationPartial.css" />
     <Content Remove="wwwroot\css\_AsidePartial.css" />
+    <Content Remove="wwwroot\css\_DashboadHeaderPartial.css" />
     <Content Remove="wwwroot\css\_DashboardHeader.css" />
+    <Content Remove="wwwroot\css\_DashboardLayout.css" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,8 +31,11 @@
     <None Include="wwwroot\css\Formes.css" />
     <None Include="wwwroot\css\SectionPartial.css" />
     <None Include="wwwroot\css\ProductCardPartial.css" />
+    <None Include="wwwroot\css\_DashboardLayout.css" />
+    <None Include="wwwroot\css\_AsideOprationPartial.css" />
     <None Include="wwwroot\css\_AsidePartial.css" />
     <None Include="wwwroot\css\_DashboardHeader.css" />
+    <None Include="wwwroot\css\_DashboadHeaderPartial.css" />
     <None Include="wwwroot\css\_HeaderPartial.css" />
   </ItemGroup>
 
@@ -44,6 +50,17 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.1" />
     <PackageReference Include="NanoXLSX" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Dashboad\Orders.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_AsidePartial.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
