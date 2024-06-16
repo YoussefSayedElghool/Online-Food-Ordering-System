@@ -1,0 +1,70 @@
+﻿.numerical-statistics-section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow: auto;
+    width: 100%;
+    min-width: 200px;
+    justify-content: flex-start;
+    scrollbar-width: thin;
+}
+
+.chart-container {
+    display: flex;
+    width: 100%;
+    /* background: brown; */
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#barChart {
+    max-width: 500px;
+}
+#pieChart {
+    max-width: 300px;
+}
+
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+table, td, th {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+tr:hover {
+    background-color: #ddd;
+}
+
+.stat-page-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 87vh;
+    padding: 22px;
+}
+
+.stat-page-container section {
+    margin-bottom: 22px;
+}
+
+    .stat-page-container section canvas {
+        margin-bottom: 22px;
+    }

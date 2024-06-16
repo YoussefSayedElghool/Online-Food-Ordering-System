@@ -1,3 +1,105 @@
 ﻿@{
     Layout = "_DashboardLayout";
 }
+
+<div class="stat-page-container">
+    <section class="numerical-statistics-section">
+    <partial name="NumberOfPartial" />
+    <partial name="NumberOfPartial" />
+    <partial name="NumberOfPartial" />
+    <partial name="NumberOfPartial" />
+    </section>
+    <section class="chart-container">
+        <canvas id="pieChart"></canvas>
+        <canvas id="barChart"></canvas>
+    </section>
+<section>
+        <div id="wrapper"></div>
+
+</section>
+
+@section Stylesheet {
+    <link rel="stylesheet" href="~/css/statistics.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/NumberOfPartial.css" asp-append-version="true" />
+        <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+              rel="stylesheet" />
+}
+
+@section Scripts  {
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+        <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
+    <script>
+        var xValues = ["Delivered", "Not Delivered"];
+        var yValues = [600, 49];
+        var barColors = [
+            "#FFCF72",
+            "#DD5150"
+            
+        ];
+
+        new Chart("pieChart", {
+            type: "pie",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Delivered Vs Not Delivered Orders"
+                }
+            }
+        });
+    </script>
+
+    <script>
+
+        var xValues = ["tricolour salad", "sweet chilli almonds", "chicken minced salad"];
+        var yValues = [55, 49, 3015];
+        var barColors = ["#FFCF72", "#DD5150", "#1B1F3C"];
+
+        new Chart("barChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: "Best Selling Food"
+                }
+            }
+        });
+
+    </script>
+
+        @* https://gridjs.io/docs/examples/server-side-pagination *@
+    <script>
+            new gridjs.Grid({
+                columns: ["Name", "Email", "Phone Number"],
+                sort: true,
+                pagination: {
+                    limit: 10
+                },
+                data: [
+                    ["John", "john@example.com", "(353) 01 222 3333"],
+                    ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
+                    ["Eoin", "eoin@gmail.com", "0097 22 654 00033"],
+                    ["Sarah", "sarahcdd@gmail.com", "+322 876 1233"],
+                    ["Afshin", "afshin@mail.com", "(353) 22 87 8356"]
+                ]
+            }).render(document.getElementById("wrapper"));
+    </script>
+    
+}

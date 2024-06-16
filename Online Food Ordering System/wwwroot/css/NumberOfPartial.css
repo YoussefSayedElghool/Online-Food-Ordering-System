@@ -1,0 +1,42 @@
+﻿
+
+.stat-number-container {
+    background-color: #FFFF;
+    width: 157px;
+    height: 85px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 11px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    font-family: Bahnschrift, 'Times New Roman', Times, serif;
+    align-items: center;
+    margin: 10px;
+    min-width: 157px;
+}
+
+
+.stat-imge {
+width:50px;
+}
+
+.stat-disc {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.stat-number {
+    color: #151515;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
