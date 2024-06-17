@@ -1,10 +1,10 @@
 ﻿
 
 .filter-container {
-    width:100%;
-    overflow-x:auto;
-    overflow-y:hidden;
-
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 29px;
 }
 .filter-craitaria {
     text-align: center;
