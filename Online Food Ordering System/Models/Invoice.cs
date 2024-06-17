@@ -6,7 +6,7 @@ namespace Online_Food_Ordering_SysBtem.Models
     public class Invoice
     {
         public int InvoiceId { get; set; }
-        public DateTime ReleaseDate { get; set; }
+        public DateTime ReleaseDate { get; set; } = DateTime.Now;
 
         [ForeignKey("User")]
         public required string UserId { get; set; }
