@@ -18,6 +18,9 @@ namespace Online_Food_Ordering_System.Models
             public DbSet<OrderItem> OrderItems { get; set; }
             public DbSet<OrderStatus> OrderStatuses { get; set; }
             public DbSet<PaymentMethod> PaymentMethods { get; set; }
+            public DbSet<Branch> Branches { get; set; }
+            public DbSet<Country> Countries { get; set; }
+            public DbSet<City> Cities { get; set; }
             public DbSet<Veg> Vegs { get; set; }
             public DbSet<CType> CTypes { get; set; }
 
