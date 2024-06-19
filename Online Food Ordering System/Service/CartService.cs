@@ -30,9 +30,9 @@ namespace Online_Food_Ordering_System.Service
             cartRepository.Edit(cart);
         }
 
-        public List<CartItemVeiwModel>? GetAllFoodAtCart()
+        public List<CartItemVeiwModel>? GetAllFoodAtCartByUserId(string userId)
         {
-            List<Cart> Carts = cartRepository.GetAll();
+            List<Cart> Carts = cartRepository.GetByUserId(userId);
             List<CartItemVeiwModel> cartItemVeiwModels = new List<CartItemVeiwModel>();
 
 

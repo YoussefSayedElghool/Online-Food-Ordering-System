@@ -24,7 +24,8 @@ namespace Online_Food_Ordering_System.Controllers
         [HttpGet]
         public IActionResult Items()
         {
-            return View("Cart" , cartService.GetAllFoodAtCart());
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return View("Cart" , cartService.GetAllFoodAtCartByUserId(userId));
         }
 
         [HttpPost]

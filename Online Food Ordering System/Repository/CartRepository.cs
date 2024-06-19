@@ -21,6 +21,11 @@ namespace Online_Food_Ordering_System.Repository
             return context.Carts.FirstOrDefault(x => x.CartId== id);
         }
 
+        public List<Cart> GetByUserId(string userId)
+        {
+            return context.Carts.Where(x => x.UserId == userId).ToList();
+        }
+
         public void Insert(Cart item)
         {
             Cart? cart = context.Carts.FirstOrDefault(c => (c.UserId == item.UserId) && (c.FoodId == item.FoodId));
@@ -48,6 +53,8 @@ namespace Online_Food_Ordering_System.Repository
             context.Carts.Remove(old);
             context.SaveChanges();
         }
+
+
     }
 }
 

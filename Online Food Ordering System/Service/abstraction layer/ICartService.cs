@@ -5,7 +5,7 @@ namespace Online_Food_Ordering_System.Service.abstraction_layer
 {
     public interface ICartService
     {
-        List<CartItemVeiwModel>? GetAllFoodAtCart();
+        List<CartItemVeiwModel>? GetAllFoodAtCartByUserId(string userId);
         Cart GetById(int id);
         void AddToCart(int foodId, string userId);
         void UpdateQuntity(int CartId, int Quntity);
