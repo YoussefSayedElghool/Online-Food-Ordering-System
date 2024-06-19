@@ -44,9 +44,16 @@
     </div>
 
     <footer class="checkout-container">
-            <h1 class="total-price-header">Total Price</h1>
+        
+        <h1 class="total-price-header">Total Price</h1>
         <h1 class="total-price">@TotalPrice$</h1>
+
+        
+        
+        
+        <a asp-area="" asp-controller="Checkout" asp-action="Checkout" style="width: 100%;display: flex; justify-content: center;">
         <button type="submit" class="checkout-button">Checkout</button>
+        </a>
 
     </footer>
 </div>
