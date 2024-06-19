@@ -3,21 +3,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Online_Food_Ordering_System.Models
 {
-    public class FoodInvoice
+    public class OrderItem
     {
-        public int FoodInvoiceId { get; set; }
+        public int OrderItemId { get; set; }
 
         [ForeignKey("Invoice")]
         public int InvoiceId { get; set; }
 
-
         [ForeignKey("Food")]
-        public required int FoodId { get; set; }
-
+        public int FoodId { get; set; }        
         public int Quntity { get; set; }
+        public decimal Price { get; set; }
 
         public virtual Invoice Invoice { get; set; } = null!;
         public virtual Food Food { get; set; } = null!;
+
 
 
     }

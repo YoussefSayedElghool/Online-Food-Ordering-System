@@ -15,7 +15,9 @@ namespace Online_Food_Ordering_System.Models
             public DbSet<Rating> Ratings { get; set; }
             public DbSet<Cart> Carts { get; set; }
             public DbSet<Invoice> Invoices { get; set; }
-            public DbSet<FoodInvoice> FoodInvoices { get; set; }
+            public DbSet<OrderItem> OrderItems { get; set; }
+            public DbSet<OrderStatus> OrderStatuses { get; set; }
+            public DbSet<PaymentMethod> PaymentMethods { get; set; }
             public DbSet<Veg> Vegs { get; set; }
             public DbSet<CType> CTypes { get; set; }
 

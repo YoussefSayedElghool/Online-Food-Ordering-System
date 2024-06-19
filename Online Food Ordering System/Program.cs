@@ -36,6 +36,9 @@ namespace Online_Food_Ordering_System
             builder.Services.AddScoped<IVegTypeRepository, VegTypeRepository>();
             builder.Services.AddScoped<ICartRepository, CartRepository>();
             builder.Services.AddScoped<ICartService, CartService>();
+            builder.Services.AddScoped<IInvoiceRepository, InvoiceRepository>();
+            builder.Services.AddScoped<IOrderItemsRepository , OrderItemsRepository>();
+            builder.Services.AddScoped<ICheckoutRepository, CheckoutRepository>();
 
             var app = builder.Build();
 
